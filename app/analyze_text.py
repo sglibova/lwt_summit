@@ -54,7 +54,7 @@ def parse_output(output: str) -> dict:
 
     # return the top 5 results sorted by confidence score
     sorted_emotions = sorted(emotions, key=lambda k: k['score'], reverse=True)[:5]
-    print("Sorted Emotions: ", sorted_emotions)
+    logging.info("Sorted Emotions: ", sorted_emotions)
     
     return sorted_emotions
 

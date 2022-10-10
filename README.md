@@ -42,7 +42,6 @@ Step 1: Update `.env-demo` to `.env`
 
 Step 2: Replace placeholder strings in `.env` with your Mantium credentials
 
-
 ## DEMO SETUP USING PYENV VIRTUALENV + VIRTUALENVWRAPPER
 Step 1: Change into a directory where you keep your projects
 
@@ -66,6 +65,10 @@ Step 7: Install the project dependencies using pip
 
 If you use other methods, feel free to adapt these steps to your needs!
 
+## ENSURE PYTHONPATH IS CONFIGURED TO LOCATE APP/ AND TESTS/ DIRECTORIES
+
+`$ export PYTHONPATH=./app/:./tests/`
+
 ## RUN BACKEND AND SEND REQUESTS VIA OPENAPI INTERACTIVE DOCUMENTATION
 
 With `FastAPI` and `Uvicorn` you should be able to run the backend with one simple command:
@@ -79,3 +82,7 @@ Step 1: Navigate to `http://127.0.0.1:8000/docs` in your browser
 Step 2: Expand the `POST` route by clicking the dropdown arrow on the right and click `Try it out`
 
 Step 3: Modify the value of `"input"` with a string that you'd like to have analyzed and click `Execute`!
+
+## RUN TESTS
+
+`$ pytest tests/*`
